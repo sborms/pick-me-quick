@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <!-- <link rel="manifest" href="favicon/site.webmanifest"> -->
+    <title>Pick me quick</title>
+</head>
+<body>
+    <script src="app.js"></script>
+    <header>
+        <h1>Pick me quick <a href="https://github.com/sborms/pick-me-quick" target="_blank" class="fa fa-github" style="font-size:24px" id="github"></a></h1>
+        <h2>Randomly generate name(s) or teams from an input file</h2>
+    </header>
+    <main>
+        <div class="parameterContainer">
+            <div class="toggleSwitch">
+                <label>
+                    <input type="checkbox" id="toggle" checked onchange="toggleSelection()">
+                    <span class="slider"></span>
+                </label>
+                <span id="toggleText">Teams</span>
+            </div>
+            <div id="fileInput">
+                <label for="file">All names as a CSV file<i class="arrow"></i></label>
+                <input type="file" id="file" accept=".csv">
+            </div>
+            <div id="quantityInput">
+                <label for="quantity" id="quantityLabel">Number<i class="arrow"></i></label>
+                <input type="number" id="quantity" min="1" value="2">
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <button id="generateButton" onclick="generateSelection()">Generate</button>
+        </div>
+        <div class="outputContainer">
+            <div id="countdown"></div>
+            <div id="output"></div>
+            <div id="balloonContainer"></div>
+        </div>
+    </main>
+</body>
+</html>

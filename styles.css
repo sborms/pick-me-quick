@@ -1,0 +1,174 @@
+@media (max-width: 500px) {
+    main {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+}
+
+header, button {
+    font-size: 14px;
+    background-color: #0f4d75;
+}
+
+h1 {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 14px;
+    color: #e1ebf1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.parameterContainer {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #611111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#fileInput, #quantityInput {
+    padding: 7px 0px;
+}
+
+button {
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.outputContainer, .buttonContainer {
+    text-align: center;
+}
+
+#toggleText {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggleSwitch label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input#quantity {
+    width: 50px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a4b5c0;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #ca0808;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0px 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+#github {
+    text-decoration: none;
+    color: white;
+}
+
+#countdown, #output {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+}
+
+#balloonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balloon {
+    display: none;
+    position: absolute;
+    background-color: rgb(86, 168, 226);
+    width: 35px;
+    height: 35px;
+    border-radius: 50% 50% 50% 50%;
+    animation: flyDown 6s linear infinite;
+}
+
+@keyframes flyDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
