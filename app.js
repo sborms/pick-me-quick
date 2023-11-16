@@ -5,7 +5,7 @@ function toggleSelection() {
     if (toggle.checked) {
         toggleText.innerText = "Teams";
     } else {
-        toggleText.innerText = "Name(s)";
+        toggleText.innerText = "Names";
     }
 }
 
