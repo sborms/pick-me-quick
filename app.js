@@ -15,11 +15,9 @@ function generateSelection() {
     const output = document.getElementById("output");
     const fileInput = document.getElementById("file");
     const countdown = document.getElementById("countdown");
-    const balloonContainer = document.getElementById("balloonContainer");
 
     // Clear previous output
     output.innerHTML = "";
-    balloonContainer.innerHTML = "";
 
     // Read the file content
     const file = fileInput.files[0];
@@ -93,19 +91,9 @@ function generateSelection() {
 
                 // Display the output
                 output.innerHTML = selectedItems.join("<br>");
-
-                // Show balloon
-                // showBalloon(balloonContainer);
             }
         }, 1000);
     };
 
     reader.readAsText(file);
-}
-
-function showBalloon(balloonContainer) {
-    const balloon = document.createElement("div");
-    balloon.classList.add("balloon");
-    balloon.style.display = "block";
-    balloonContainer.appendChild(balloon);
 }

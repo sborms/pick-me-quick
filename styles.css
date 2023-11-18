@@ -58,6 +58,10 @@ button {
     margin-bottom: 15px;
 }
 
+button:disabled {
+    opacity: 0.3;
+}
+
 .outputContainer, .buttonContainer {
     text-align: center;
 }
@@ -98,7 +102,8 @@ input#quantity {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #a4b5c0;
+    background-color: #ca0808;
+    opacity: 0.3;
     border-radius: 34px;
     transition: 0.4s;
 }
@@ -116,7 +121,7 @@ input#quantity {
 }
 
 input:checked + .slider {
-    background-color: #ca0808;
+    opacity: 1;
 }
 
 input:checked + .slider:before {
@@ -142,33 +147,4 @@ input:checked + .slider:before {
     position: relative;
     text-align: center;
     font-size: 22px;
-}
-
-#balloonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.balloon {
-    display: none;
-    position: absolute;
-    background-color: rgb(86, 168, 226);
-    width: 35px;
-    height: 35px;
-    border-radius: 50% 50% 50% 50%;
-    animation: flyDown 6s linear infinite;
-}
-
-@keyframes flyDown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(20vh);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
