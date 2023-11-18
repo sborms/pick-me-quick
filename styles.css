@@ -37,7 +37,7 @@ h2 {
 
 .parameterContainer {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 20px;
     border: 1px solid #611111;
     border-radius: 8px;
@@ -60,6 +60,7 @@ button {
 
 button:disabled {
     opacity: 0.3;
+    pointer-events: none;
 }
 
 .outputContainer, .buttonContainer {

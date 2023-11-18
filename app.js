@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var generateButton = document.getElementById("generateButton");
+    generateButton.disabled = true;
+});
+
 function toggleSelection() {
     const toggle = document.getElementById("toggle");
     const toggleText = document.getElementById("toggleText");
@@ -6,6 +11,17 @@ function toggleSelection() {
         toggleText.innerText = "Teams";
     } else {
         toggleText.innerText = "Names";
+    }
+}
+
+function handleFileChange() {
+    var fileInput = document.getElementById("file");
+    var generateButton = document.getElementById("generateButton");
+    
+    if (fileInput.files.length > 0) {
+        generateButton.disabled = false;
+    } else {
+        generateButton.disabled = true;
     }
 }
 
